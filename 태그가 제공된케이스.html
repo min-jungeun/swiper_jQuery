@@ -57,7 +57,12 @@
         //         alert($(this).index())
         //     })
         // }); 자바스크립트식
-        const aniw = $(document).width();
+
+        // index(), width(), height(), $(this), attr() ->제이쿼리 핵심
+        const aniw = $(document).width(); //숫자
+        // const aniw = $(document).css('width'); //문자
+        // const intergin = parseInt($(".gnb").css("margin-left")); parseInt -> 정수로 돌려줄게
+
         const lis = $(".banner li").length;
         $(".banner li").width(aniw);
         $(".banner ul").width(aniw * lis);
