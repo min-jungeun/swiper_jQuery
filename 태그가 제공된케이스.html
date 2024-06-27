@@ -14,10 +14,10 @@
         }
         .banner ul{ /*swiper-wrapper*/
             display: flex;
-            width: calc(100vw * 3);
+            
         }
         .banner li{ /*swiper-slide*/
-            width: 100vw;
+            
             height: 600px;
         }
         .banner li:nth-child(1){
@@ -57,10 +57,14 @@
         //         alert($(this).index())
         //     })
         // }); 자바스크립트식
+        const aniw = $(document).width();
+        const lis = $(".banner li").length;
+        $(".banner li").width(aniw);
+        $(".banner ul").width(aniw * lis);
 
         $(".btns button").on('click', function(){
            
-                alert($(this).index());
+                // alert($(this).index());
             
         }); //제이쿼리식 위의 식과 똑같이 구동된다.
     </script>
