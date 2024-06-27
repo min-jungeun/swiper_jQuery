@@ -101,10 +101,12 @@
             btnsbutton += `<button>${$(this).data("msg")}</button>`;
         })
 
-        $(".btns").html(btnsbutton)
+
+        $(".btns").html(btnsbutton);
+
+        $(".btns button").eq(0).addClass("on")
 
         $(".btns button").on('click', function(){
-           
                 // alert($(this).index());
             $(".banner ul").css("marginLeft", -aniw * $(this).index());
             $(this).addClass("on").siblings().removeClass('on')
